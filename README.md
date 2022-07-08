@@ -14,6 +14,5 @@ Api source - https://currencylayer.com/documentation
 </p>
 
 ## Demo Video
-<p>
-  <img src="https://user-images.githubusercontent.com/72181295/178030125-69678a9f-ff42-4e48-afdc-08b2d8acc18f.gif" width="200" 0height="400" />
-</p>
+https://user-images.githubusercontent.com/72181295/178031566-e04ccf39-3da3-4475-984e-069ce89542bb.mp4
+
