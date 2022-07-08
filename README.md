@@ -3,7 +3,7 @@ Retrofit ( GET, POST, PUT, PATCH ) RestApi Calling methods, okhttp, RxJava. <br>
 Added three more Interceptors. <br>
 1- HttpLoggingInterceptor.<br>
 2- HandlerInterceptor.<br>
-3- ErrorHandlingIntercetor.<br>
+3- ErrorHandlingInterceptor.<br>
 
 Api source - https://currencylayer.com/documentation
 
