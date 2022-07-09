@@ -1,5 +1,5 @@
 ## CurrencyConvertorRestAPI
-Retrofit ( GET, POST, PUT, PATCH ) RestApi Calling methods, okhttp, RxJava. <br>
+Retrofit ( GET with @querymap) RestApi Calling methods, okhttp, RxJava. <br>
 Added three more Interceptors. <br>
 1- HttpLoggingInterceptor.<br>
 2- HandlerInterceptor.<br>
