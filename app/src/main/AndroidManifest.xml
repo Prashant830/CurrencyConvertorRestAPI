@@ -16,10 +16,10 @@
         android:theme="@style/Theme.CurrencyConvertor"
         tools:targetApi="31">
         <activity
-            android:name=".currencyapplication.moneyconvertor.ui.MoneyConversion"
+            android:name=".ui.MoneyConversion"
             android:exported="false" />
         <activity
-            android:name=".currencyapplication.currencyavailable.ui.Main"
+            android:name=".ui.Main"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

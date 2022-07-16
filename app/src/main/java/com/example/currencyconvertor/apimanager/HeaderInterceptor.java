@@ -1,4 +1,4 @@
-package com.example.currencyconvertor.core.newtworkdata.apimanager;
+package com.example.currencyconvertor.apimanager;
 
 import androidx.annotation.NonNull;
 
@@ -13,7 +13,7 @@ public class HeaderInterceptor implements Interceptor {
     @Override
     public Response intercept(@NonNull Chain chain) throws IOException {
         Request.Builder request = chain.request().newBuilder();
-            request.addHeader("apikey", "lFC3nowi30GKFGaaj7G3cQx3v9aCQjd0");
+            request.addHeader("apikey", "6HWkaQaWjkRsrV776AkEQ33AX2FMUTNR");
         return chain.proceed(request.build());
     }
 }

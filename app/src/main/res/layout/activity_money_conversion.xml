@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".currencyapplication.moneyconvertor.ui.MoneyConversion">
+    tools:context=".ui.MoneyConversion">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,13 +57,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
-        <ProgressBar
-            android:id="@+id/progress_two"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:visibility="invisible"
-            android:layout_gravity="center"/>
 
         <Button
             android:onClick="ClearText"
