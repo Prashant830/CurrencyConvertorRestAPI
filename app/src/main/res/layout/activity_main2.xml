@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Main">
+    tools:context=".currencyapplication.currencyavailable.ui.Main">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,12 +20,20 @@
             >
 
             <TextView
-                android:id="@+id/recycle1"
+                android:id="@+id/openCurrencies"
+                android:hint="Available Currencies ...."
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <ProgressBar
+                android:id="@+id/progress_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Available Currency Rates..."
-                android:textSize="20dp"
-                />
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:layout_gravity="center"/>
 
             <Button
                 android:layout_marginTop="20dp"

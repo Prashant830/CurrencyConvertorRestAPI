@@ -1,4 +1,4 @@
-package com.example.currencyconvertor.apimanager;
+package com.example.currencyconvertor.core.newtworkdata.apimanager;
 
 import androidx.annotation.NonNull;
 

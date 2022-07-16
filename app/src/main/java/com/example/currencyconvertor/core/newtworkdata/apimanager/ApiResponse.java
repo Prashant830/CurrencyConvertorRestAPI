@@ -1,6 +1,7 @@
-package com.example.currencyconvertor.apimanager;
+package com.example.currencyconvertor.core.newtworkdata.apimanager;
 
-import com.example.currencyconvertor.apimanager.RxApi;
+import com.example.currencyconvertor.core.newtworkdata.apimanager.services.LiveDataApi;
+import com.example.currencyconvertor.core.newtworkdata.apimanager.services.MoneyConversionApi;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -12,6 +13,8 @@ public class ApiResponse {
     public static Retrofit retrofit;
     public static OkHttpClient okHttp;
     public static final String BASE_URL = "https://api.apilayer.com/currency_data/";
+
+
 
 
     public static Retrofit getRetrofit(){
@@ -32,13 +35,21 @@ public class ApiResponse {
                     .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
+
         }
         return retrofit;
     }
 
-    //create RxaApi instance ...
-    public static RxApi getApi() {
-        return getRetrofit().create(RxApi.class);
+   public static LiveDataApi getLiveDataApi(){
+        return createApi(LiveDataApi.class);
+   }
+
+    public static MoneyConversionApi getMoneyConversionApi(){
+        return createApi(MoneyConversionApi.class);
+    }
+
+    private static <T> T createApi(Class<T> clazz) {
+        return getRetrofit().create(clazz);
     }
 
 }

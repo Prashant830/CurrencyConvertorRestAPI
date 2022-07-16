@@ -1,4 +1,4 @@
-package com.example.currencyconvertor.model;
+package com.example.currencyconvertor.core.newtworkdata.entity.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
