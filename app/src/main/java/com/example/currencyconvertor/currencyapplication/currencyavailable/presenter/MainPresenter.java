@@ -54,7 +54,7 @@ public class MainPresenter implements CurrAvailableCompact.Presenter {
 
                 @Override
                 public void onError(@NonNull Throwable e) {
-                    //Toast.makeText(Main.this, ErrorHandlingInterceptor.errorMessage, Toast.LENGTH_SHORT).show();
+                    cunCurrencyList = ErrorHandlingInterceptor.errorMessage;
                 }
 
                 @Override

@@ -4,6 +4,7 @@ import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 
+import com.example.currencyconvertor.core.newtworkdata.apimanager.ErrorHandlingInterceptor;
 import com.example.currencyconvertor.core.newtworkdata.entity.model.CurrencyConversion;
 import com.example.currencyconvertor.core.newtworkdata.entity.model.LiveModel;
 import com.example.currencyconvertor.core.newtworkdata.repository.Repository;
@@ -52,7 +53,7 @@ public class MoneyConvertionPresenter implements MoneyConvCompact.Presenter {
 
                 @Override
                 public void onError(@NonNull Throwable e) {
-
+                    cunCurrencyList = ErrorHandlingInterceptor.errorMessage;
                 }
 
                 @Override
