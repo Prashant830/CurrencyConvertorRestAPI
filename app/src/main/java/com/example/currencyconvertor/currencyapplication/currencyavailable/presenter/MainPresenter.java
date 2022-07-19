@@ -37,9 +37,8 @@ public class MainPresenter implements CurrAvailableCompact.Presenter {
 
                 @Override
                 public void onNext(@NonNull LiveModel liveModel) {
-
-                   cunCurrencyList = "AED - " + liveModel.getQuotes().getUsdaed().toString() + "\n"
-                           + "AFN - " + liveModel.getQuotes().getUsdafn().toString() +"\n"
+                    cunCurrencyList = "AED - " + liveModel.getQuotes().getUsdaed().toString() + "\n"
+                            + "AFN - " + liveModel.getQuotes().getUsdafn().toString() +"\n"
                     + "ALL - " + liveModel.getQuotes().getUsdall().toString() +"\n"
                     + "AMD - " + liveModel.getQuotes().getUsdamd().toString() + "\n"
                    + "INR - " + liveModel.getQuotes().getUsdinr().toString() + "\n"
