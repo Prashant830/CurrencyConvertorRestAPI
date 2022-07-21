@@ -53,7 +53,7 @@ public class MainPresenter implements CurrAvailableCompact.Presenter {
 
                 @Override
                 public void onError(@NonNull Throwable e) {
-                    cunCurrencyList = ErrorHandlingInterceptor.errorMessage;
+                    cunCurrencyList = ErrorHandlingInterceptor.errorMessage + e.getMessage();
                 }
 
                 @Override
