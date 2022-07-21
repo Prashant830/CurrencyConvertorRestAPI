@@ -53,7 +53,7 @@ public class MoneyConvertionPresenter implements MoneyConvCompact.Presenter {
 
                 @Override
                 public void onError(@NonNull Throwable e) {
-                    cunCurrencyList = ErrorHandlingInterceptor.errorMessage;
+                    cunCurrencyList = ErrorHandlingInterceptor.errorMessage + e.getMessage();
                 }
 
                 @Override
