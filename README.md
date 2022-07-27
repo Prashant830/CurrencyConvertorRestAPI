@@ -16,4 +16,3 @@ Api source - https://currencylayer.com/documentation
 
 ## Demo and sample Video
 https://user-images.githubusercontent.com/72181295/178031566-e04ccf39-3da3-4475-984e-069ce89542bb.mp4
-
