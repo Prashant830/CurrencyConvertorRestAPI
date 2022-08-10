@@ -1,4 +1,4 @@
-## CurrencyConvertorRestAPI
+## Currency ConvertorRestAPI
 Retrofit ( GET with @querymap) RestApi Calling methods, okhttp, RxJava, Convert app in Model-View-Presenter Architecture (MVP).<br>
 Added three more Interceptors. <br>
 1- HttpLoggingInterceptor.<br>
