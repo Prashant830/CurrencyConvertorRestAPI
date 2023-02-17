@@ -6,12 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.currencyconvertor.R;
+import com.example.currencyconvertor.ThreadMannaged.Threads;
 import com.example.currencyconvertor.core.newtworkdata.apimanager.ErrorHandlingInterceptor;
 import com.example.currencyconvertor.core.newtworkdata.entity.model.LiveModel;
 import com.example.currencyconvertor.core.newtworkdata.repository.Repository;
@@ -31,6 +33,7 @@ public class Main extends AppCompatActivity implements CurrAvailableCompact.View
     TextView mainText;
     ProgressBar progressBar;
     CurrAvailableCompact.Presenter presenter;
+//    Threads t1 = new Threads();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +43,11 @@ public class Main extends AppCompatActivity implements CurrAvailableCompact.View
         progressBar = (ProgressBar) findViewById(R.id.progress_one);
         presenter = new MainPresenter(this);
 
+
+
     }
+
+
     @Override
     public void showProgress() {
         progressBar.setVisibility(View.VISIBLE);
@@ -53,8 +60,23 @@ public class Main extends AppCompatActivity implements CurrAvailableCompact.View
 
 
     public void openApi(View view) {
-        presenter.onAvailableCurrencyButtonClick();
-        mainText.setText(MainPresenter.cunCurrencyList);
+       // t1.start();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Log.i("MainActivity",Thread.currentThread().getName());
+                    presenter.onAvailableCurrencyButtonClick();
+                    mainText.setText(MainPresenter.cunCurrencyList);
+                }
+                catch (Exception e) {
+                    //print the error here
+                }
+            }
+        }).start();
+
+        Log.i("MainActivity",Thread.currentThread().getName());
+
 
     }
 

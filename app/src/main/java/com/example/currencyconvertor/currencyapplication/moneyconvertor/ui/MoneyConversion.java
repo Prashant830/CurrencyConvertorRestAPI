@@ -3,6 +3,7 @@ package com.example.currencyconvertor.currencyapplication.moneyconvertor.ui;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -15,6 +16,7 @@ import com.example.currencyconvertor.core.newtworkdata.entity.model.CurrencyConv
 import com.example.currencyconvertor.core.newtworkdata.entity.model.LiveModel;
 import com.example.currencyconvertor.core.newtworkdata.repository.Repository;
 import com.example.currencyconvertor.currencyapplication.currencyavailable.CurrAvailableCompact;
+import com.example.currencyconvertor.currencyapplication.currencyavailable.presenter.MainPresenter;
 import com.example.currencyconvertor.currencyapplication.moneyconvertor.MoneyConvCompact;
 import com.example.currencyconvertor.currencyapplication.moneyconvertor.presenter.MoneyConvertionPresenter;
 
@@ -73,8 +75,22 @@ public class MoneyConversion extends AppCompatActivity implements MoneyConvCompa
             Toast.makeText(this, "Please Enter Currency Conversion date in YYYY-MM-DD Format", Toast.LENGTH_SHORT).show();
             return;
         }
-        presenter.onCurrencyConvertorButtonClick();
-        mtext.setText(MoneyConvertionPresenter.cunCurrencyList);
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Log.i("MoneyConversion",Thread.currentThread().getName());
+                    presenter.onCurrencyConvertorButtonClick();
+                    mtext.setText(MoneyConvertionPresenter.cunCurrencyList);
+                }
+                catch (Exception e) {
+                    //print the error here
+                }
+            }
+        }).start();
+
+        Log.i("MoneyConversion",Thread.currentThread().getName());
 
     }
 
